@@ -184,10 +184,9 @@ footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line);
 
 <main>
 <header class="hero">
-  <div class="eyebrow">Engineering handbook</div>
   <h1>Git &amp; GitHub Guidelines</h1>
   <p class="lede">How the Synapse team branches, commits, reviews, and ships. Every repo follows these rules. GitHub enforces most of them, so treat this page as an explanation of why the guardrails exist and how to work with them.</p>
-  <div class="meta"><span>v1.0</span><span>Effective 2026-10-07 (UTC)</span><span>Model: Git Flow lite</span><span>Merge: merge commits</span></div>
+  <div class="meta"><span>v1.0</span><span>Effective 2026-10-07 (UTC)</span></div>
 </header>
 
 <section id="rules">
@@ -207,7 +206,7 @@ footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line);
 
 <section id="model">
   <h2>Branch model</h2>
-  <p>We use <strong>Git Flow lite</strong>: two long-lived branches, short-lived work branches, and no <code>release/*</code> branches. To ship a release, open a PR from <code>develop</code> into <code>main</code>.</p>
+  <p>We use two long-lived branches, short-lived work branches, and no <code>release/*</code> branches. To ship a release, open a PR from <code>develop</code> into <code>main</code>.</p>
 
   <div class="diagram" role="img" aria-label="Diagram: feature branches merge into develop; develop is merged into main for a release; hotfixes branch from main, merge back into main and are back-merged into develop.">
     <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg">
@@ -484,7 +483,6 @@ gh pr create --base develop --draft --fill</pre></div>
       </tbody>
     </table>
   </div>
-  <div class="callout"><strong>Why linear history is off:</strong> GitHub's "Require linear history" setting blocks merge commits, and merge commits are our merge strategy. Force-push and deletion are still blocked, so history on protected branches can't be rewritten.</div>
   <p>Add a third ruleset for <strong>tags</strong> matching <code>v*</code>: block updates and deletions, and allow only the release bot to create them. Once a tag is published, it never changes.</p>
   <p><strong>Break-glass:</strong> the bypass list stays empty. In a real emergency, an org owner adds themselves temporarily, records the reason in <code>#eng-incidents</code>, and removes themselves straight after the fix. Every bypass gets a post-mortem.</p>
 </section>
@@ -660,7 +658,7 @@ jobs:
 </section>
 
 <footer>
-  To change these guidelines, open a PR against the file and get approval from 2 leads. Last updated 2026-10-07 (UTC).
+  To change these guidelines, open a PR against the file and get approval from 2 leads.
 </footer>
 </main>
 </div>
