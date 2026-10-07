@@ -1,6 +1,6 @@
 # Git & GitHub Guidelines
 
-How the Synapse team branches, commits, reviews, and ships. Every Synapse repo follows these rules.
+How our team branches, commits, reviews, and ships. Every repo follows these rules.
 
 The full guide is [`index.html`](index.html). It covers the branch model, naming, commit format, PR and review rules, branch protection, CI/CD, releases, hotfixes, and a setup checklist for each repo.
 
